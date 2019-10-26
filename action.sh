@@ -49,11 +49,6 @@ echo 'Committing the site to git and pushing'
 
     cd "${BUILD_DIR}"
 
-    if git diff --exit-code; then
-        echo "There is nothing to commit, so aborting"
-        exit 0
-    fi
-
     # Now add all the changes and commit and push
     git add . && \
     git commit -m "Publishing site $(date)" && \
